@@ -50,9 +50,10 @@ char* algoritmoBalanceo = "";
 t_log* logs;
 
 void leerConfiguracion(){
-	char* path = "/home/utnso/workspace/tp-2017-2c-Grupo-1---K3525/YAMA/src/yama-config.cfg";
+	char* path = "yama-config.cfg";
 	t_config* archivo_configuracion = config_create(path);
 	puertoFs = config_get_int_value(archivo_configuracion, "FS_PUERTO");
+	puts("flag");
 	printf("El puerto FS es: %i \n", puertoFs);
 	ipFs = config_get_string_value(archivo_configuracion, "FS_IP");
 	printf("La IP FS es: %s \n", ipFs);
